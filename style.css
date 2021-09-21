@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 1000px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+.element-one{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    animation-name: myAnimation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    /*animation-fill-mode: forwards;*/
+    /*animation-delay: 3s;*/
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+
+}
+@keyframes myAnimation {
+    /*from{*/
+    /*    transform: translateY(0);*/
+    /*}*/
+    /*to{*/
+    /*    transform: translateY(410px);*/
+    /*}*/
+
+    0%{
+        transform: translate(0, 0);
+    }
+    10%{
+        transform: translate(0, 410px);
+        border-radius: 50%;
+    }
+    50%{
+        transform: translate(410px, 410px);
+    }
+    75%{
+        transform: translate(410px, 0) rotate(360deg);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+
+.con2{
+    width: 800px;
+    height: 300px;
+    border: 2px solid red;
+    margin: 20px auto;
+}
+.element-two{
+    border-radius: 20px;
+    width: 150px;
+    height: 80px;
+    background-color: green;
+    animation-name: cssAnimation;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    margin: 100px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation-delay: 2s;
+}
+@keyframes cssAnimation {
+    0%{
+        transform: translate(0, 0) rotate(0);
+    }
+
+    10%{
+        transform: translateX(0) rotate(20deg);
+        background-color: #08ac98;
+    }
+    20%{
+        transform: translateX(0) rotate(20deg);
+    }
+    40%{
+        transform: translateX(550px);
+        background-color: #0ad2fe;
+    }
+    50%{
+        transform: translateX(550px);
+        background-color: #0ad2fe;
+    }
+    80%{
+        transform: translateX(550px) rotate(0);
+       background-color: #0ad2fe;
+    }
+    100%{
+        transform: translateX(0) rotate(-360deg);
+        background-color: green;
+    }
+
+
+}
+
